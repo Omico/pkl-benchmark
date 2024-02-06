@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm")
+    id("pklbenchmark.benchmark")
     kotlin("plugin.serialization")
 }
 

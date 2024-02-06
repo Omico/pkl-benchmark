@@ -3,6 +3,7 @@ versions:
   gradle: "8.5"
   kotlin: "1.9.22"
   kotlinx:
+    benchmark: "0.4.10"
     serialization: "1.6.2"
   pkl: "0.25.1"
   plugins:
@@ -19,7 +20,9 @@ plugins:
     com.diffplug.spotless: ${versions.plugins.spotless}
     com.gradle.enterprise: ${versions.plugins.gradle.enterprise}
     org.jetbrains.kotlin.jvm: ${versions.kotlin}
+    org.jetbrains.kotlin.plugin.allopen: ${versions.kotlin}
     org.jetbrains.kotlin.plugin.serialization: ${versions.kotlin}
+    org.jetbrains.kotlinx.benchmark: ${versions.kotlinx.benchmark}
   omico:
     me.omico.consensus.api: ${versions.consensus}
     me.omico.consensus.git: ${versions.consensus}
@@ -28,7 +31,14 @@ plugins:
 
 dependencies:
   mavenCentral:
+    org.jetbrains.kotlin:
+      kotlin-gradle-plugin:
+        alias: kotlinGradlePlugin
+        version: ${versions.kotlin}
     org.jetbrains.kotlinx:
+      kotlinx-benchmark-runtime:
+        alias: kotlinx.benchmark.runtime
+        version: ${versions.kotlinx.benchmark}
       kotlinx-serialization-properties:
         alias: kotlinx.serialization.properties
         version: ${versions.kotlinx.serialization}

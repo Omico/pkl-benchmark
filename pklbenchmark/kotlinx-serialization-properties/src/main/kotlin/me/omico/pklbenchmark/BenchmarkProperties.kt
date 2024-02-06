@@ -1,3 +1,5 @@
+package me.omico.pklbenchmark
+
 import kotlinx.serialization.Serializable
 
 @Serializable
